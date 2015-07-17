@@ -1,104 +1,68 @@
-div#game {
-    position:relative;
+.main {
+    text-align:center;
+    font-family: helvetica;
+    font-size: 12pt;
+    height: 60px;
 }
 
-
-div#board {
-
-    float:left;
-    height:382px;
-    width:382px;
-    border-style:solid;
-    border-width:9px;
-    border-color:#DEB887;
+.checkerBoard {
+  margin: 100px auto;
+  margin-top: 100px;
+  background-color: #E3CF57;
+  -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
 }
 
-div.square {
-
-    float:left;
-    position:relative;
-    width:46px;
-    height:46px;
-    border-width:2px;
-    border-right-style:solid;
-    border-bottom-style:solid;
-    border-color:#444;
+.cell, .piece {
+  width: 30px;
+  height: 30px;
 }
 
-div.square.movable:hover {
-
-    -webkit-box-shadow: inset 0px 0px 8px #FFD700;
-       -moz-box-shadow: inset 0px 0px 8px #FFD700;
-            box-shadow: inset 0px 0px 8px #FFD700;
-    cursor:pointer;
+.black {
+    background: #B8860B;
 }
 
-div.square:nth-last-child(-n + 8) {
-    border-bottom-style:none;
+.activeCell {
+    background: #E0E0E0;
+    opacity: .7;
 }
 
-div.square:nth-child(8n) {
-    border-right-style:none;
+.activeCell.hovered {
+    background: #8F8F8F;
 }
 
-div.square.light {
-    background-color:#ccc;
+.piece {
+    border-radius: 15px;
 }
 
-div.square.dark {
-    background-color:#666;
+.piece.black {
+    background: #282828;
 }
 
-div#pieces {
-    position:absolute;
-    left:9px;
-    top:9px;
-    background-color:green;
+.piece.red {
+    background: #CD3700;
 }
 
-div.piece {
-    position:absolute;
-    width:32px;
-    height:32px;
-    margin:7px;
-    -webkit-box-shadow: 0px 0px 3px #666;
-       -moz-box-shadow: 0px 0px 3px #666;
-            box-shadow: 0px 0px 3px #666;
-    -webkit-border-radius:16px;
-       -moz-border-radius:16px;
-            border-radius:16px;
-    background-color:blue;
-
+.piece .kingCenter {
+    display:none;
+    padding:4px;
 }
 
-div.piece:hover {
-    -webkit-box-shadow: 0px 0px 8px #FFD700;
-       -moz-box-shadow: 0px 0px 8px #FFD700;
-            box-shadow: 0px 0px 8px #FFD700;
-    cursor:pointer;
+.piece.black .kingCenter {
+    color: yellow;
+     -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
 }
 
-div.piece.selected {
-    -webkit-box-shadow: 0px 0px 8px #FFD700;
-       -moz-box-shadow: 0px 0px 8px #FFD700;
-            box-shadow: 0px 0px 8px #FFD700;
+.piece.red .kingCenter {
+    color: yellow;
+     -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
 }
 
-div.piece.light {
-    background-color:red;
-}
-
-div.piece.dark {
-    background-color:black;
-}
-
-/*div.piece.king {
-    background-image:url('http://i.imgur.com/HYQkl.png');
-    background-repeat:no-repeat;
-    background-position:center;
-}*/
-
-
-div#meta {
-    float:right;
+.piece.king .kingCenter {
+    display:inline-block;
 }
